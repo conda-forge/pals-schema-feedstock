@@ -1,6 +1,6 @@
 context:
   name: pals-schema
-  version: "0.1.1"
+  version: "0.2.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pals_schema/pals_schema-${{ version }}.tar.gz
-  sha256: 661925959212186fc100898d5f814985b829e047e93bf08b43ac4d8720d7532e
+  sha256: e9ada66131cc28552c434cfc7461d4c3df325f7cf3562252c3f133440b828d2b
 
 build:
   noarch: python
@@ -32,7 +32,7 @@ requirements:
 tests:
   - python:
       imports:
-      - pals_schema
+        - pals
       pip_check: true
       python_version: ${{ python_min }}.*
   - requirements:
@@ -50,7 +50,7 @@ about:
   description: |
     This is a Python implementation for the Particle Accelerator Lattice Standard (PALS).
   license: BSD-3-Clause-LBNL
-  license_file: LICENSE
+  license_file: LICENSE.txt
   documentation: https://pals-project.readthedocs.io
   repository: https://github.com/campa-consortium/pals-python
 
