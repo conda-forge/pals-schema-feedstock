@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   script: python -m pip install . --no-build-isolation --no-deps -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -42,7 +42,8 @@ tests:
     script:
       - python -m pytest -v tests/
     files:
-      source: tests/
+      source:
+        - tests/
 
 about:
   homepage: https://github.com/campa-consortium/pals-python
