@@ -1,6 +1,6 @@
 context:
   name: pals-schema
-  version: "0.2.0"
+  version: "0.3.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pals_schema/pals_schema-${{ version }}.tar.gz
-  sha256: e9ada66131cc28552c434cfc7461d4c3df325f7cf3562252c3f133440b828d2b
+  sha256: b3f358381c88dcc9fdf31aefa0a9ebba8219eef9265f7473498344589237bd40
 
 build:
   noarch: python
   script: python -m pip install . --no-build-isolation --no-deps -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
