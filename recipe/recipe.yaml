@@ -1,6 +1,7 @@
 context:
   name: pals-schema
   version: "0.3.0"
+  python_min: 3.11
 
 package:
   name: ${{ name|lower }}
@@ -34,7 +35,9 @@ tests:
       imports:
         - pals
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - pytest
